@@ -1,0 +1,34 @@
+Oefening: Random Quote Generator
+
+Doel: Leer de basisprincipes van React door een interactieve quote-generator te bouwen.
+Opdrachtomschrijving
+
+Je gaat een eenvoudige React-applicatie bouwen die een willekeurige quote uit een lijst toont. De
+gebruiker kan een nieuwe willekeurige quote genereren met een knop. Daarnaast kan de
+gebruiker een quote kopiëren naar het klembord, waarbij visuele feedback wordt gegeven met
+react-toastify . Maak gebruik van het ontwerp in bijlage. Op basis van het ontwerp plaats je
+onderaan 2 knoppen. Maak gebruik van 2 iconen. Een dobbelsteen en een copy/save icon.
+
+Stap 1: Project Setup
+1. Maak een nieuw Vite-project aan met React en TypeScript.
+
+2. Installeer de nodige dependencies, waaronder react-toastify .
+
+Stap 2: Structuur van de applicatie
+1. Creëer een component die een lijst van quotes (string[]) ontvangt als props .
+2. Zorg ervoor dat de component zelfstandig de logica beheert om een willekeurige quote te
+kiezen.
+
+Stap 3: State en Event Handling
+1. Gebruik een useState -variabele in je component (local state) om een willekeurig
+gegenereerd indexnummer bij te houden.
+2. Implementeer een functie die een nieuw willekeurig nummer genereert wanneer de
+gebruiker op de "Randomize" knop klikt.
+
+Stap 4: Kopiëren naar het klembord
+1. Voeg een knop toe waarmee de gebruiker de huidige quote naar het klembord kan kopiëren.
+2. Gebruik de navigator.clipboard.writeText API om de tekst te kopiëren.
+
+Stap 5: Visuele feedback met react-toastify
+1. Toon een melding (toast) wanneer een quote succesvol is gekopieerd.
+2. Gebruik react-toastify om dit op een nette manier weer te geven.

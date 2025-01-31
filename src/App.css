@@ -1,0 +1,143 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+@import url("../icon.css");
+:root {
+  font-size: 62.5%;
+  --background: #0e1523;
+  --background-shadow: #020508;
+  --card: #313a49;
+  --main-font: #ddf2f8;
+  --break: #586366;
+  --quote-roll: #53ffab;
+  --transition-color: #3fc986;
+}
+@font-face {
+  font-family: "Inter", serif;
+  font-family: "Lexend Deca", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 2rem;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  main {
+    background-color: var(--card);
+    width: 540px;
+    height: 330px;
+    border-radius: 2rem;
+    box-shadow: var(--background-shadow) 0px 20px 30px -10px;
+    position: relative;
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* position: relative; */
+      .index {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4rem;
+        color: var(--quote-roll);
+        font-size: 1.4rem;
+        font-family: "Inter", serif;
+        font-weight: 600;
+        letter-spacing: 0.4rem;
+        p {
+          &:nth-of-type(1) {
+            padding-right: 1rem;
+          }
+        }
+      }
+      .advice {
+        max-width: 450px;
+        min-height: 185px;
+        max-height: 190px;
+        text-align: center;
+        padding-top: 3rem;
+        color: var(--main-font);
+        font-size: 3rem;
+        line-height: 3.7rem;
+        font-family: "Inter", serif;
+        font-weight: 600;
+      }
+      .break {
+        width: 450px;
+        border: 0.1px solid var(--break);
+        margin: 2.5rem;
+      }
+      .pause {
+        color: var(--main-font);
+        padding-top: 3rem;
+        position: absolute;
+        bottom: 4.5rem;
+        .icon-media-pause {
+          font-size: 4rem;
+          padding: 0.2rem;
+          background-color: var(--card);
+        }
+        &:hover {
+          cursor: pointer;
+          transition: all 200ms;
+          color: #94a2a6;
+        }
+      }
+      .button {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 5rem;
+        border: none;
+        position: absolute;
+        cursor: pointer;
+        font-size: 3rem;
+        background-color: var(--quote-roll);
+        bottom: -3rem;
+        left: calc(100% - 300px);
+        &:hover {
+          transition: all 200ms;
+          background-color: var(--transition-color);
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .icon-dice {
+          font-size: 2.7rem;
+          color: var(--background);
+          position: absolute;
+          right: 29%;
+          top: 26%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    main {
+      width: 450px;
+      height: 400px;
+      section {
+        .quote {
+          max-width: 350px;
+          max-height: 170px;
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+        .break {
+          width: 350px;
+          margin: 7rem;
+        }
+        .pauze {
+          bottom: 6.9rem;
+        }
+        .button {
+          top: 92%;
+          left: calc(100% - 256px);
+        }
+      }
+    }
+  }
+}
