@@ -11,7 +11,6 @@ const Quotes = () => {
 
   const getAdvice = async () => {
     try {
-      // Adding a timestamp to bypass caching and always get new advice
       const resp = await fetch(
         `https://api.adviceslip.com/advice?timestamp=${new Date().getTime()}`
       );
@@ -23,9 +22,8 @@ const Quotes = () => {
   };
 
   useEffect(() => {
-    getAdvice(); // Fetch advice when the component mounts
+    getAdvice();
   }, []);
-
   const copyToClipboard = () => {
     if (slip) {
       navigator.clipboard.writeText(slip.advice);
@@ -36,7 +34,6 @@ const Quotes = () => {
       });
     }
   };
-
   return (
     <section>
       <div className="index">
